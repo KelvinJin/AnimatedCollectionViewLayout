@@ -1,0 +1,34 @@
+language: objective-c
+osx_image: xcode8
+env:
+  global:
+  - LC_CTYPE=en_US.UTF-8
+  - LANG=en_US.UTF-8
+  - WORKSPACE="AnimatedCollectionViewLayout.xcworkspace"
+  - IOS_FRAMEWORK_SCHEME="AnimatedCollectionViewLayout"
+  - IOS_SDK=iphonesimulator10.0
+  - EXAMPLE_SCHEME="iOS Example"
+  matrix:
+    - DESTINATION="OS=10.0,name=iPhone 7 Plus"     SCHEME="$IOS_FRAMEWORK_SCHEME"     SDK="$IOS_SDK"     POD_LINT="NO"
+script:
+  - set -o pipefail
+  - xcodebuild -version
+  - xcodebuild -showsdks
+  - xcodebuild -list
+  - xcodebuild -workspace "$WORKSPACE" -list
+
+  # Build and test Framework in Debug
+  - xcodebuild -workspace "$WORKSPACE" -scheme "$SCHEME" -sdk "$SDK" -destination "$DESTINATION" -configuration Debug ONLY_ACTIVE_ARCH=NO test | xcpretty
+
+  # Build Framework in ReleaseTest
+  - xcodebuild -workspace "$WORKSPACE" -scheme "$SCHEME" -sdk "$SDK" -destination "$DESTINATION" -configuration ReleaseTest ONLY_ACTIVE_ARCH=NO build | xcpretty
+
+  # Build Example in Debug if specified
+  - xcodebuild -workspace "$WORKSPACE" -scheme "$EXAMPLE_SCHEME" -sdk "$SDK" -destination "$DESTINATION" -configuration Debug ONLY_ACTIVE_ARCH=NO build | xcpretty
+
+  # Run `pod lib lint` if specified
+  - if [ $POD_LINT == "YES" ]; then
+      pod lib lint;
+    fi
+
+  - CheckCocoaPodsQualityIndexes.rb AnimatedCollectionViewLayout
