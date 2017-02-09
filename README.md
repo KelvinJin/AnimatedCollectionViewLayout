@@ -65,7 +65,7 @@ import AnimatedCollectionViewLayout
 // ...
 
 let layout = AnimatedCollectionViewLayout()
-layout.animator = ParallexAttributesAnimator()
+layout.animator = ParallaxAttributesAnimator()
 collectionView.collectionViewLayout = layout
 ```
 
