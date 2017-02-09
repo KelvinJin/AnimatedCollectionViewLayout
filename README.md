@@ -1,5 +1,7 @@
 # AnimatedCollectionViewLayout
 
+Normally a `UICollectionView` has no transition effects when you scroll from one item to another. There are lots of ways to write animations for UICollectionView, but using a UICollectionViewLayout subclass is by far the simplest one. And it doesn't break any of your existing code. You can still use your UICollectionView subclass and you don't need to change your UICollectionViewCell. Just plug and enjoy.
+
 [![CI Status](http://img.shields.io/travis/KelvinJin/AnimatedCollectionViewLayout.svg?style=flat)](https://travis-ci.org/KelvinJin/AnimatedCollectionViewLayout)
 [![Version](https://img.shields.io/cocoapods/v/AnimatedCollectionViewLayout.svg?style=flat)](https://cocoapods.org/pods/AnimatedCollectionViewLayout)
 [![License](https://img.shields.io/cocoapods/l/AnimatedCollectionViewLayout.svg?style=flat)](https://cocoapods.org/pods/AnimatedCollectionViewLayout)
@@ -8,7 +10,7 @@
 
 <table>
 <tr>
-<th>Parallex</th>
+<th>Parallax</th>
 <th>ZoomInOut</th>
 <th>RotateInOut</th>
 <th>Cards</th>
@@ -39,51 +41,38 @@ To run the example project, clone the repo, and start `iOS Example` in Xcode.
 
 ## Requirements
 
-iOS 8.0+
+- iOS 8.0+
 
 ## Installation
 
 ### CocoaPods
 
-[CocoaPods](http://cocoapods.org) is a dependency manager for Cocoa projects. You can install it with the following command:
-
-```bash
-$ gem install cocoapods
-```
-
 To integrate AnimatedCollectionViewLayout into your Xcode project using CocoaPods, specify it in your `Podfile`:
 
 ```ruby
-use_frameworks!
-
 pod 'AnimatedCollectionViewLayout'
 ```
 
-Then, run the following command:
+## Usage
 
-```bash
-$ pod install
+### Get Started
+
+Import the library where you want to use it. Create a `AnimatedCollectionViewLayout` object, set its `animator` and assign it to your `UICollectionView`.
+
+```swift
+import AnimatedCollectionViewLayout
+
+// ...
+
+let layout = AnimatedCollectionViewLayout()
+layout.animator = ParallexAttributesAnimator()
+collectionView.collectionViewLayout = layout
 ```
 
+### Customization
 
-### Carthage
-
-[Carthage](https://github.com/Carthage/Carthage) is a decentralized dependency manager that builds your dependencies and provides you with binary frameworks.
-
-You can install Carthage with [Homebrew](http://brew.sh/) using the following command:
-
-```bash
-$ brew update
-$ brew install carthage
-```
-
-To integrate AnimatedCollectionViewLayout into your Xcode project using Carthage, specify it in your `Cartfile`:
-
-```ogdl
-github "KelvinJin/AnimatedCollectionViewLayout" ~> 0.1
-```
-
-Run `carthage update` to build the framework and drag the built `AnimatedCollectionViewLayout`.framework into your Xcode project.
+Animators implement the protocol `LayoutAttributesAnimator`. Most of them have additionaly parameters that you can tweak the transitions.
+You can also write your own animators.
 
 ## TODO
 
