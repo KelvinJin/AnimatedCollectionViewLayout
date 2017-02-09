@@ -197,13 +197,13 @@
 				TargetAttributes = {
 					D9899DC91DF4A091008766B5 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = 8Q693ZG5RN;
+						DevelopmentTeam = MG8YZ6JLG6;
 						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 					};
 					D9899DD21DF4A092008766B5 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = 8Q693ZG5RN;
+						DevelopmentTeam = MG8YZ6JLG6;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -388,14 +388,14 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 8Q693ZG5RN;
+				DEVELOPMENT_TEAM = MG8YZ6JLG6;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Source/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.uthoft.--PROJECT-NAME--";
+				PRODUCT_BUNDLE_IDENTIFIER = com.uthoft.AnimatedCollectionViewLayout;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -409,14 +409,14 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 8Q693ZG5RN;
+				DEVELOPMENT_TEAM = MG8YZ6JLG6;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Source/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.uthoft.--PROJECT-NAME--";
+				PRODUCT_BUNDLE_IDENTIFIER = com.uthoft.AnimatedCollectionViewLayout;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
@@ -427,10 +427,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				DEVELOPMENT_TEAM = 8Q693ZG5RN;
-				INFOPLIST_FILE = AnimatedCollectionViewLayoutTests/Info.plist;
+				DEVELOPMENT_TEAM = MG8YZ6JLG6;
+				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.uthoft.--PROJECT-NAME--Tests";
+				PRODUCT_BUNDLE_IDENTIFIER = com.uthoft.AnimatedCollectionViewLayoutTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -440,10 +440,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				DEVELOPMENT_TEAM = 8Q693ZG5RN;
-				INFOPLIST_FILE = AnimatedCollectionViewLayoutTests/Info.plist;
+				DEVELOPMENT_TEAM = MG8YZ6JLG6;
+				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.uthoft.--PROJECT-NAME--Tests";
+				PRODUCT_BUNDLE_IDENTIFIER = com.uthoft.AnimatedCollectionViewLayoutTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
