@@ -11,18 +11,33 @@ import AnimatedCollectionViewLayout
 
 class SimpleCollectionViewCell: UICollectionViewCell {
     
-    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var titleLabel: UILabel!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        
-        // clipsToBounds = false
+    func bind(color: String, imageName: String) {
+        titleLabel.text = "\(arc4random_uniform(1000))"
+        backgroundColor = .clear
+        contentView.backgroundColor = color.hexColor
     }
-    
-    func bind(text: String, imageName: String) {
-        titleLabel.text = text
-        imageView.image = UIImage(named: imageName)
+}
+
+extension String {
+    var hexColor: UIColor {
+        let hex = trimmingCharacters(in: CharacterSet.alphanumerics.inverted)
+        var int = UInt32()
+        Scanner(string: hex).scanHexInt32(&int)
+        let a, r, g, b: UInt32
+        switch hex.characters.count {
+        case 3: // RGB (12-bit)
+            (a, r, g, b) = (255, (int >> 8) * 17, (int >> 4 & 0xF) * 17, (int & 0xF) * 17)
+        case 6: // RGB (24-bit)
+            (a, r, g, b) = (255, int >> 16, int >> 8 & 0xFF, int & 0xFF)
+        case 8: // ARGB (32-bit)
+            (a, r, g, b) = (int >> 24, int >> 16 & 0xFF, int >> 8 & 0xFF, int & 0xFF)
+        default:
+            return .clear
+        }
+        return UIColor(red: CGFloat(r) / 255, green: CGFloat(g) / 255, blue: CGFloat(b) / 255, alpha: CGFloat(a) / 255)
     }
 }
 
@@ -31,12 +46,12 @@ class ImageCollectionViewController: UICollectionViewController {
     var animator: (LayoutAttributesAnimator, Bool)?
     
     let cellIdentifier = "SimpleCollectionViewCell"
-    let vcs = [("Arts", "nature1"),
-               ("Business", "nature2"),
-               ("UI/UX", "nature3"),
-               ("Crazy Tiger", "animal1"),
-               ("Cat", "animal2"),
-               ("Rex Doggy", "animal3")]
+    let vcs = [("f44336", "nature1"),
+               ("9c27b0", "nature2"),
+               ("3f51b5", "nature3"),
+               ("03a9f4", "animal1"),
+               ("009688", "animal2"),
+               ("8bc34a", "animal3")]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -76,7 +91,7 @@ extension ImageCollectionViewController: UICollectionViewDelegateFlowLayout {
         
         if let cell = c as? SimpleCollectionViewCell {
             let v = vcs[indexPath.row]
-            cell.bind(text: v.0, imageName: v.1)
+            cell.bind(color: v.0, imageName: v.1)
             cell.clipsToBounds = animator?.1 ?? true
         }
         

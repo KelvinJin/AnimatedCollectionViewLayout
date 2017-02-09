@@ -1,21 +1,3 @@
-# WARNING
-
-Thank you for using AnimatedCollectionViewLayout. Before you release your awesome project to the world, complete the following steps.
-
-THIS LIST IS EASY, CHECK IT OFF ONE-BY-ONE BABY!
-
- - [ ] Open the project in Xcode and add features to AnimatedCollectionViewLayout
- - [ ] Make sure you are using Swift 3 ("Convert to latest Swift syntax")
- - [ ] Fix all build errors and warnings, add tests (yes really)
- - [ ] Add a screenshot or AT LEAST some picture, and fill in this readme
- - [ ] Add all details to your [Podspec](AnimatedCollectionViewLayout.podspec)
- - [ ] Delete all this crap up here
- - [ ] Make one release (full steps are in [CONTRIBUTING.md] in case you forget)
-
-THEN YOU'RE DONE, GO STAR [swift3-module-template](https://github.com/fulldecent/swift3-module-template) FOR UPDATES.
-
-----
-
 # AnimatedCollectionViewLayout
 
 [![CI Status](http://img.shields.io/travis/KelvinJin/AnimatedCollectionViewLayout.svg?style=flat)](https://travis-ci.org/KelvinJin/AnimatedCollectionViewLayout)
@@ -24,16 +6,40 @@ THEN YOU'RE DONE, GO STAR [swift3-module-template](https://github.com/fulldecent
 [![Platform](https://img.shields.io/cocoapods/p/AnimatedCollectionViewLayout.svg?style=flat)](https://cocoapods.org/pods/AnimatedCollectionViewLayout)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
-<a href="https://placehold.it/400?text=Screen+shot"><img width=200 height=200 src="https://placehold.it/400?text=Screen+shot" alt="Screenshot" /></a>
-
+<table>
+<tr>
+<th>Parallex</th>
+<th>ZoomInOut</th>
+<th>RotateInOut</th>
+<th>Cards</th>
+</tr>
+<tr>
+<td><img src="http://i.imgur.com/v8JuRYj.gif"/></td>
+<td><img src="http://i.imgur.com/lLooXQ7.gif"/></td>
+<td><img src="http://i.imgur.com/lCNh5mg.gif"/></td>
+<td><img src="http://i.imgur.com/joA1emB.gif"/></td>
+</tr>
+<tr>
+<th>CrossFade</th>
+<th>Cube</th>
+<th>Page</th>
+<th></th>
+</tr>
+<tr>
+<td><img src="http://i.imgur.com/U1hOKYo.gif"/></td>
+<td><img src="http://i.imgur.com/897mcdm.gif"/></td>
+<td><img src="http://i.imgur.com/HRcvRIV.gif"/></td>
+<td></td>
+</tr>
+</table>
 
 ## Example
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
-
+To run the example project, clone the repo, and start `iOS Example` in Xcode.
 
 ## Requirements
 
+iOS 8.0+
 
 ## Installation
 
@@ -79,6 +85,11 @@ github "KelvinJin/AnimatedCollectionViewLayout" ~> 0.1
 
 Run `carthage update` to build the framework and drag the built `AnimatedCollectionViewLayout`.framework into your Xcode project.
 
+## TODO
+
+- [ ] Support non-paging mode.
+- [ ] Support non-full screen items.  
+- [ ] Support item selection notifications.
 
 ## Author
 

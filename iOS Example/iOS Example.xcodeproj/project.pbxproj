@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		297776ED1E4AFE5300605794 /* AnimatedCollectionViewLayout.framework in Embeded Frameworks */ = {isa = PBXBuildFile; fileRef = 297776EA1E4AFE4E00605794 /* AnimatedCollectionViewLayout.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		29A1031B1E4AF07700F03854 /* AnimatorTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A1031A1E4AF07700F03854 /* AnimatorTableViewController.swift */; };
 		D9337FFB1DF4B24E001596B5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9337FFA1DF4B24E001596B5 /* Main.storyboard */; };
 		D9899DF61DF4A53C008766B5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9899DF51DF4A53C008766B5 /* AppDelegate.swift */; };
@@ -16,7 +17,39 @@
 		D9899E0F1DF4A8B0008766B5 /* AnimatedCollectionViewLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9899E0E1DF4A8B0008766B5 /* AnimatedCollectionViewLayout.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		297776E91E4AFE4E00605794 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 297776E41E4AFE4E00605794 /* AnimatedCollectionViewLayout.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D9899DCA1DF4A092008766B5;
+			remoteInfo = AnimatedCollectionViewLayout;
+		};
+		297776EB1E4AFE4E00605794 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 297776E41E4AFE4E00605794 /* AnimatedCollectionViewLayout.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D9899DD31DF4A092008766B5;
+			remoteInfo = AnimatedCollectionViewLayoutTests;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		297776E21E4AFE2C00605794 /* Embeded Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				297776ED1E4AFE5300605794 /* AnimatedCollectionViewLayout.framework in Embeded Frameworks */,
+			);
+			name = "Embeded Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		297776E41E4AFE4E00605794 /* AnimatedCollectionViewLayout.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AnimatedCollectionViewLayout.xcodeproj; path = ../AnimatedCollectionViewLayout.xcodeproj; sourceTree = "<group>"; };
 		29A1031A1E4AF07700F03854 /* AnimatorTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatorTableViewController.swift; sourceTree = "<group>"; };
 		D9337FFA1DF4B24E001596B5 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D9899DF21DF4A53C008766B5 /* iOS Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -40,9 +73,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		297776E31E4AFE4700605794 /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				297776E41E4AFE4E00605794 /* AnimatedCollectionViewLayout.xcodeproj */,
+			);
+			name = Dependencies;
+			sourceTree = "<group>";
+		};
+		297776E51E4AFE4E00605794 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				297776EA1E4AFE4E00605794 /* AnimatedCollectionViewLayout.framework */,
+				297776EC1E4AFE4E00605794 /* AnimatedCollectionViewLayoutTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		D9899DE91DF4A53C008766B5 = {
 			isa = PBXGroup;
 			children = (
+				297776E31E4AFE4700605794 /* Dependencies */,
 				D9899DF41DF4A53C008766B5 /* Source */,
 				D9899DF31DF4A53C008766B5 /* Products */,
 				D9899E0D1DF4A8B0008766B5 /* Frameworks */,
@@ -87,6 +138,7 @@
 			buildConfigurationList = D9899E041DF4A53C008766B5 /* Build configuration list for PBXNativeTarget "iOS Example" */;
 			buildPhases = (
 				D9899DEE1DF4A53C008766B5 /* Sources */,
+				297776E21E4AFE2C00605794 /* Embeded Frameworks */,
 				D9899DEF1DF4A53C008766B5 /* Frameworks */,
 				D9899DF01DF4A53C008766B5 /* Resources */,
 			);
@@ -127,12 +179,35 @@
 			mainGroup = D9899DE91DF4A53C008766B5;
 			productRefGroup = D9899DF31DF4A53C008766B5 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 297776E51E4AFE4E00605794 /* Products */;
+					ProjectRef = 297776E41E4AFE4E00605794 /* AnimatedCollectionViewLayout.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				D9899DF11DF4A53C008766B5 /* iOS Example */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		297776EA1E4AFE4E00605794 /* AnimatedCollectionViewLayout.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = AnimatedCollectionViewLayout.framework;
+			remoteRef = 297776E91E4AFE4E00605794 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		297776EC1E4AFE4E00605794 /* AnimatedCollectionViewLayoutTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = AnimatedCollectionViewLayoutTests.xctest;
+			remoteRef = 297776EB1E4AFE4E00605794 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		D9899DF01DF4A53C008766B5 /* Resources */ = {

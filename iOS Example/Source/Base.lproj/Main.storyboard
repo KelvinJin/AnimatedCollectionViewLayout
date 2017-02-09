@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12100" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="NbP-BS-4jY">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="NbP-BS-4jY">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12072"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -32,21 +32,21 @@
                                     <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MVd-3D-uhq">
-                                            <rect key="frame" x="79" y="90" width="42" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rEp-7G-ele">
                                             <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
                                         </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QSQ-Xq-WAm">
+                                            <rect key="frame" x="-9" y="39" width="218.5" height="123"/>
+                                            <fontDescription key="fontDescription" name="AvenirNext-UltraLight" family="Avenir Next" pointSize="90"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                 </view>
                                 <constraints>
-                                    <constraint firstItem="MVd-3D-uhq" firstAttribute="centerX" secondItem="PaF-XJ-Xcy" secondAttribute="centerX" id="5iO-5H-xPL"/>
+                                    <constraint firstItem="QSQ-Xq-WAm" firstAttribute="centerX" secondItem="PaF-XJ-Xcy" secondAttribute="centerX" id="9ef-xY-PkK"/>
                                     <constraint firstItem="rEp-7G-ele" firstAttribute="height" secondItem="PaF-XJ-Xcy" secondAttribute="height" id="A8q-In-0iS"/>
-                                    <constraint firstItem="MVd-3D-uhq" firstAttribute="centerY" secondItem="PaF-XJ-Xcy" secondAttribute="centerY" id="Kob-bi-shH"/>
+                                    <constraint firstItem="QSQ-Xq-WAm" firstAttribute="centerY" secondItem="PaF-XJ-Xcy" secondAttribute="centerY" id="Ka3-TZ-Uga"/>
                                     <constraint firstItem="rEp-7G-ele" firstAttribute="width" secondItem="PaF-XJ-Xcy" secondAttribute="width" id="VWm-DV-EL2"/>
                                     <constraint firstItem="rEp-7G-ele" firstAttribute="centerY" secondItem="PaF-XJ-Xcy" secondAttribute="centerY" id="pAQ-sA-XXz"/>
                                     <constraint firstItem="rEp-7G-ele" firstAttribute="centerX" secondItem="PaF-XJ-Xcy" secondAttribute="centerX" id="yZz-3A-8OJ"/>
@@ -54,7 +54,7 @@
                                 <size key="customSize" width="200" height="200"/>
                                 <connections>
                                     <outlet property="imageView" destination="rEp-7G-ele" id="c00-fB-pdC"/>
-                                    <outlet property="titleLabel" destination="MVd-3D-uhq" id="vbY-76-aL7"/>
+                                    <outlet property="titleLabel" destination="QSQ-Xq-WAm" id="8Vm-ea-2IG"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>

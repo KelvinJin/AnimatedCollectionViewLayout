@@ -2,7 +2,8 @@ Pod::Spec.new do |s|
   s.name = 'AnimatedCollectionViewLayout'
   s.version = '0.1.0'
   s.license = { :type => 'MIT', :file => 'LICENSE' }
-  s.summary = 'A short description of AnimatedCollectionViewLayout.'
+  s.summary = 'A UICollectionViewLayout subclass that adds custom
+  transitions/animations to the UICollectionView'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -11,15 +12,17 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-  TODO: Add long description of the pod here.
+  A normal UICollectionView has no transition effects when you scroll from one
+  item to another. There are lots of ways to write animations for
+  UICollectionView, but using a UICollectionViewLayout subclass is by far the
+  simplest one. And it doesn't break any of your existing code. You can still
+  use your UICollectionView subclass and you don't need to change your
+  UICollectionViewCell. Just plug and enjoy.
                        DESC
 
   s.homepage         = 'https://github.com/KelvinJin/AnimatedCollectionViewLayout'
-  s.authors = { 'PROJECT_OWNER' => 'USER_EMAIL' }
+  s.authors = { 'Jin Wang' => 'jinw1990@gmail.com' }
   s.source = { :git => 'https://github.com/KelvinJin/AnimatedCollectionViewLayout.git', :tag => s.version }
   s.ios.deployment_target = '8.0'
   s.source_files = 'Source/*.swift'
-  s.resource_bundles = {
-    'AnimatedCollectionViewLayout' => ['Resources/**/*.{png}']
-  }
 end
