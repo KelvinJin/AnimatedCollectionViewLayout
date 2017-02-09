@@ -11,7 +11,7 @@ import AnimatedCollectionViewLayout
 
 class AnimatorTableViewController: UITableViewController {
     
-    private let animators: [(LayoutAttributesAnimator, Bool)] = [(ParallexAttributesAnimator(), true),
+    private let animators: [(LayoutAttributesAnimator, Bool)] = [(ParallaxAttributesAnimator(), true),
                                                          (ZoomInOutAttributesAnimator(), true),
                                                          (RotateInOutAttributesAnimator(), false),
                                                          (LinearCardAttributeAnimator(), false),

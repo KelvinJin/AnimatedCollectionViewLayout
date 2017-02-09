@@ -8,7 +8,7 @@
 
 import UIKit
 
-public struct ParallexAttributesAnimator: LayoutAttributesAnimator {
+public struct ParallaxAttributesAnimator: LayoutAttributesAnimator {
     public var speed: CGFloat
     
     public init(speed: CGFloat = 0.5) {

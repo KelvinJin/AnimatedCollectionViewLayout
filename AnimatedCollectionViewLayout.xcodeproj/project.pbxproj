@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		29A103071E4AED1400F03854 /* LayoutAttributesAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A103061E4AED1400F03854 /* LayoutAttributesAnimator.swift */; };
-		29A103091E4AED5900F03854 /* ParallexAttributesAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A103081E4AED5900F03854 /* ParallexAttributesAnimator.swift */; };
+		29A103091E4AED5900F03854 /* ParallaxAttributesAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A103081E4AED5900F03854 /* ParallaxAttributesAnimator.swift */; };
 		29A1030B1E4AED9500F03854 /* ZoomInOutAttributesAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A1030A1E4AED9500F03854 /* ZoomInOutAttributesAnimator.swift */; };
 		29A1030D1E4AEDBE00F03854 /* RotateInOutAttributesAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A1030C1E4AEDBE00F03854 /* RotateInOutAttributesAnimator.swift */; };
 		29A1030F1E4AEDF800F03854 /* LinearCardAttributesAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A1030E1E4AEDF800F03854 /* LinearCardAttributesAnimator.swift */; };
@@ -35,7 +35,7 @@
 
 /* Begin PBXFileReference section */
 		29A103061E4AED1400F03854 /* LayoutAttributesAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayoutAttributesAnimator.swift; sourceTree = "<group>"; };
-		29A103081E4AED5900F03854 /* ParallexAttributesAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ParallexAttributesAnimator.swift; path = Animators/ParallexAttributesAnimator.swift; sourceTree = "<group>"; };
+		29A103081E4AED5900F03854 /* ParallaxAttributesAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ParallaxAttributesAnimator.swift; path = Animators/ParallaxAttributesAnimator.swift; sourceTree = "<group>"; };
 		29A1030A1E4AED9500F03854 /* ZoomInOutAttributesAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ZoomInOutAttributesAnimator.swift; path = Animators/ZoomInOutAttributesAnimator.swift; sourceTree = "<group>"; };
 		29A1030C1E4AEDBE00F03854 /* RotateInOutAttributesAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RotateInOutAttributesAnimator.swift; path = Animators/RotateInOutAttributesAnimator.swift; sourceTree = "<group>"; };
 		29A1030E1E4AEDF800F03854 /* LinearCardAttributesAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LinearCardAttributesAnimator.swift; path = Animators/LinearCardAttributesAnimator.swift; sourceTree = "<group>"; };
@@ -75,7 +75,7 @@
 		29A103051E4AECED00F03854 /* Animators */ = {
 			isa = PBXGroup;
 			children = (
-				29A103081E4AED5900F03854 /* ParallexAttributesAnimator.swift */,
+				29A103081E4AED5900F03854 /* ParallaxAttributesAnimator.swift */,
 				29A1030A1E4AED9500F03854 /* ZoomInOutAttributesAnimator.swift */,
 				29A1030C1E4AEDBE00F03854 /* RotateInOutAttributesAnimator.swift */,
 				29A1030E1E4AEDF800F03854 /* LinearCardAttributesAnimator.swift */,
@@ -251,7 +251,7 @@
 				29A103171E4AEE7400F03854 /* TurnAttributesAnimator.swift in Sources */,
 				29A1030F1E4AEDF800F03854 /* LinearCardAttributesAnimator.swift in Sources */,
 				D9899DE61DF4A372008766B5 /* AnimatedCollectionViewLayout.swift in Sources */,
-				29A103091E4AED5900F03854 /* ParallexAttributesAnimator.swift in Sources */,
+				29A103091E4AED5900F03854 /* ParallaxAttributesAnimator.swift in Sources */,
 				29A103191E4AEE8900F03854 /* PageAttributesAnimator.swift in Sources */,
 				29A103151E4AEE5A00F03854 /* CrossFadeAttributesAnimator.swift in Sources */,
 				29A103111E4AEE1F00F03854 /* CubeAttributesAnimator.swift in Sources */,
