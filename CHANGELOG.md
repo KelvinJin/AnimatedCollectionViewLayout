@@ -5,8 +5,20 @@ All notable changes to this project will be documented in this file.
 ## [Master](https://github.com/KelvinJin/AnimatedCollectionViewLayout)
 ### Added
 
-  + Implemented the initial version that only supports full screen paging items.
-
 ### Changed
 
 ### Removed
+
+## 0.1.1
+Released on 2017-02-09
+
+### Changed
+
+  + [Breaking] Changed `ParallexAttributesAnimator` to `ParallaxAttributesAnimator`
+
+## 0.1.0
+Released on 2017-02-09
+
+### Added
+
+  + Implemented the initial version that only supports full screen paging items.
