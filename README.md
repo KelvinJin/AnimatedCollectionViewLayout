@@ -10,7 +10,7 @@ Normally a `UICollectionView` has no transition effects when you scroll from one
 
 <table>
 <tr>
-<th>Parallex</th>
+<th>Parallax</th>
 <th>ZoomInOut</th>
 <th>RotateInOut</th>
 <th>Cards</th>
