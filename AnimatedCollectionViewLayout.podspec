@@ -20,9 +20,9 @@ Pod::Spec.new do |s|
   UICollectionViewCell. Just plug and enjoy.
                        DESC
 
-  s.homepage         = 'https://github.com/KelvinJin/AnimatedCollectionViewLayout'
+  s.homepage = 'https://github.com/KelvinJin/AnimatedCollectionViewLayout'
   s.authors = { 'Jin Wang' => 'jinw1990@gmail.com' }
   s.source = { :git => 'https://github.com/KelvinJin/AnimatedCollectionViewLayout.git', :tag => s.version }
   s.ios.deployment_target = '8.0'
-  s.source_files = 'Source/*.swift'
+  s.source_files = 'Source/**/*.swift'
 end
