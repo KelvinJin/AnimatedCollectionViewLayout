@@ -8,7 +8,9 @@
 
 import UIKit
 
+/// An animator that _pushes_ the current cell into the screen while the next cell slide in.
 public struct PageAttributeAnimator: LayoutAttributesAnimator {
+    /// The max scale that would be applied to the current cell. 0 means no scale. 0.2 by default.
     public var scaleRate: CGFloat
     
     public init(scaleRate: CGFloat = 0.2) {

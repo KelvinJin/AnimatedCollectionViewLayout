@@ -8,7 +8,10 @@
 
 import UIKit
 
+/// An animator that zoom in/out cells when you scroll.
 public struct ZoomInOutAttributesAnimator: LayoutAttributesAnimator {
+    /// The scaleRate decides the maximum scale rate where 0 means no scale and
+    /// 1 means the size will be double at max and disappearing at min.
     public var scaleRate: CGFloat
     
     public init(scaleRate: CGFloat = 0.2) {

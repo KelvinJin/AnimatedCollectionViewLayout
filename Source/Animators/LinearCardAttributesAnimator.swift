@@ -8,10 +8,18 @@
 
 import UIKit
 
-// ClipsToBounds = false
+/// An animator that turns the cells into card mode.
+/// - warning: You need to set `clipsToBounds` to `false` on the cell to make
+/// this effective.
 public struct LinearCardAttributeAnimator: LayoutAttributesAnimator {
+    /// The alpha to apply on the cells that are away from the center. Should be
+    /// in range [0, 1]. 0.5 by default.
     public var minAlpha: CGFloat
+    
+    /// The spacing ratio between two cells. 0.4 by default.
     public var itemSpacing: CGFloat
+    
+    /// The scale rate that will applied to the cells to make it into a card.
     public var scaleRate: CGFloat
     
     public init(minAlpha: CGFloat = 0.5, itemSpacing: CGFloat = 0.4, scaleRate: CGFloat = 0.7) {
