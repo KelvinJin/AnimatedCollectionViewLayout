@@ -67,7 +67,7 @@ collectionView.collectionViewLayout = layout
 
 ### Customization
 
-Animators implement the protocol `LayoutAttributesAnimator`. Most of them have additionaly parameters that you can tweak the transitions.
+Animators implement the protocol `LayoutAttributesAnimator`. Most of the built-in ones have additional parameters that you can tweak the transitions.
 You can also write your own animators.
 
 ## TODO
