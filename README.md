@@ -78,7 +78,7 @@ You can also write your own animators.
 
 ## Author
 
-Jin Wang
+[Jin Wang](https://twitter.com/jinw1990)
 
 
 ## License
