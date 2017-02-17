@@ -7,6 +7,8 @@ All notable changes to this project will be documented in this file.
 
 ### Changed
 
+  + Fixed the issue that Cocoapods failed to include the `Animators` folder #2.
+
 ### Removed
 
 ## 0.1.1
