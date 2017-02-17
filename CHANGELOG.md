@@ -7,9 +7,15 @@ All notable changes to this project will be documented in this file.
 
 ### Changed
 
-  + Fixed the issue that Cocoapods failed to include the `Animators` folder #2.
-
 ### Removed
+
+## 0.1.2
+
+Released on 2017-02-17
+
+### Changed
+
+  + Fixed the issue that Cocoapods failed to include the `Animators` folder #2.
 
 ## 0.1.1
 Released on 2017-02-09
