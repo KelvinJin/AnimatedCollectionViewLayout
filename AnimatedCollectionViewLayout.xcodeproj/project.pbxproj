@@ -16,6 +16,7 @@
 		29A103131E4AEE4200F03854 /* UIView+Anchor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A103121E4AEE4200F03854 /* UIView+Anchor.swift */; };
 		29A103151E4AEE5A00F03854 /* CrossFadeAttributesAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A103141E4AEE5A00F03854 /* CrossFadeAttributesAnimator.swift */; };
 		29A103191E4AEE8900F03854 /* PageAttributesAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A103181E4AEE8900F03854 /* PageAttributesAnimator.swift */; };
+		29D8640D1E5D6E2600A8BA4F /* SnapInAttributesAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D8640C1E5D6E2600A8BA4F /* SnapInAttributesAnimator.swift */; };
 		D9899DD41DF4A092008766B5 /* AnimatedCollectionViewLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9899DCA1DF4A092008766B5 /* AnimatedCollectionViewLayout.framework */; };
 		D9899DD91DF4A093008766B5 /* AnimatedCollectionViewLayoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9899DD81DF4A093008766B5 /* AnimatedCollectionViewLayoutTests.swift */; };
 		D9899DDB1DF4A093008766B5 /* AnimatedCollectionViewLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = D9899DCD1DF4A092008766B5 /* AnimatedCollectionViewLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -42,6 +43,7 @@
 		29A103121E4AEE4200F03854 /* UIView+Anchor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Anchor.swift"; sourceTree = "<group>"; };
 		29A103141E4AEE5A00F03854 /* CrossFadeAttributesAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrossFadeAttributesAnimator.swift; sourceTree = "<group>"; };
 		29A103181E4AEE8900F03854 /* PageAttributesAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageAttributesAnimator.swift; sourceTree = "<group>"; };
+		29D8640C1E5D6E2600A8BA4F /* SnapInAttributesAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapInAttributesAnimator.swift; sourceTree = "<group>"; };
 		D9899DCA1DF4A092008766B5 /* AnimatedCollectionViewLayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AnimatedCollectionViewLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9899DCD1DF4A092008766B5 /* AnimatedCollectionViewLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnimatedCollectionViewLayout.h; sourceTree = "<group>"; };
 		D9899DCE1DF4A092008766B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 				29A103101E4AEE1F00F03854 /* CubeAttributesAnimator.swift */,
 				29A103141E4AEE5A00F03854 /* CrossFadeAttributesAnimator.swift */,
 				29A103181E4AEE8900F03854 /* PageAttributesAnimator.swift */,
+				29D8640C1E5D6E2600A8BA4F /* SnapInAttributesAnimator.swift */,
 			);
 			name = Animators;
 			sourceTree = "<group>";
@@ -254,6 +257,7 @@
 				29A1030D1E4AEDBE00F03854 /* RotateInOutAttributesAnimator.swift in Sources */,
 				29A103131E4AEE4200F03854 /* UIView+Anchor.swift in Sources */,
 				29A1030B1E4AED9500F03854 /* ZoomInOutAttributesAnimator.swift in Sources */,
+				29D8640D1E5D6E2600A8BA4F /* SnapInAttributesAnimator.swift in Sources */,
 				29A103071E4AED1400F03854 /* LayoutAttributesAnimator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -57,13 +57,17 @@ class ImageCollectionViewController: UICollectionViewController {
                ("3f51b5", "nature3"),
                ("03a9f4", "animal1"),
                ("009688", "animal2"),
-               ("8bc34a", "animal3")]
+               ("8bc34a", "animal3"),
+               ("FFEB3B", "nature1"),
+               ("FF9800", "nature2"),
+               ("795548", "nature3"),
+               ("607D8B", "animal1")]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        // Must turn paging on.
+        // Turn on the paging mode for auto snaping support.
         collectionView?.isPagingEnabled = true
         
         if let layout = collectionView?.collectionViewLayout as? AnimatedCollectionViewLayout {

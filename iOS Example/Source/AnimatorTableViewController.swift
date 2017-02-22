@@ -14,10 +14,11 @@ class AnimatorTableViewController: UITableViewController {
     private let animators: [(LayoutAttributesAnimator, Bool)] = [(ParallaxAttributesAnimator(), true),
                                                          (ZoomInOutAttributesAnimator(), true),
                                                          (RotateInOutAttributesAnimator(), true),
-                                                         (LinearCardAttributeAnimator(), false),
-                                                         (CubeAttributeAnimator(), true),
-                                                         (CrossFadeAttributeAnimator(), true),
-                                                         (PageAttributeAnimator(), true)]
+                                                         (LinearCardAttributesAnimator(), false),
+                                                         (CubeAttributesAnimator(), true),
+                                                         (CrossFadeAttributesAnimator(), true),
+                                                         (SnapInAttributesAnimator(), true),
+                                                         (PageAttributesAnimator(), true)]
     
     @IBOutlet weak var isHorizontalScrollToggle: UISwitch!
     

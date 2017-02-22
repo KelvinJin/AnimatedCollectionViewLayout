@@ -9,7 +9,7 @@
 import UIKit
 
 /// An animator that applies a cube transition effect when you scroll.
-public struct CubeAttributeAnimator: LayoutAttributesAnimator {
+public struct CubeAttributesAnimator: LayoutAttributesAnimator {
     /// The perspective that will be applied to the cells. Must be negative. -1/500 by default.
     /// Recommended range [-1/2000, -1/200].
     public var perspective: CGFloat
