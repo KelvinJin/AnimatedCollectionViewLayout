@@ -9,8 +9,6 @@
 import UIKit
 
 /// An animator that rotating the cell in/out when you scroll.
-/// - warning: You have to set `clipsToBounds` to `false` on the cell for this to
-/// be effective. This might not be needed in the future release though.
 public struct RotateInOutAttributesAnimator: LayoutAttributesAnimator {
     /// The alpha to apply on the cells that are away from the center. Should be 
     /// in range [0, 1]. 0 by default.
@@ -28,13 +26,13 @@ public struct RotateInOutAttributesAnimator: LayoutAttributesAnimator {
     public func animate(collectionView: UICollectionView, attributes: PagerCollectionViewLayoutAttributes) {
         let position = attributes.middleOffset
         if abs(position) >= 1 {
-            attributes.contentView?.transform = .identity
+            attributes.transform = .identity
             attributes.alpha = 1.0
         } else {
             let rotateFactor = maxRotate * position
             attributes.zIndex = attributes.indexPath.row
             attributes.alpha = 1.0 - abs(position) + minAlpha
-            attributes.contentView?.transform = CGAffineTransform(rotationAngle: rotateFactor)
+            attributes.transform = CGAffineTransform(rotationAngle: rotateFactor)
         }
     }
 }

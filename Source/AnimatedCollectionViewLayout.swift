@@ -76,7 +76,6 @@ public class AnimatedCollectionViewLayout: UICollectionViewFlowLayout {
 public class PagerCollectionViewLayoutAttributes: UICollectionViewLayoutAttributes {
     public var contentView: UIView?
     public var scrollDirection: UICollectionViewScrollDirection = .vertical
-    public var originFrame: CGRect = .zero
     
     public var startOffset: CGFloat = 0
     public var middleOffset: CGFloat = 0
@@ -86,10 +85,19 @@ public class PagerCollectionViewLayoutAttributes: UICollectionViewLayoutAttribut
         let copy = super.copy(with: zone) as! PagerCollectionViewLayoutAttributes
         copy.contentView = contentView
         copy.scrollDirection = scrollDirection
-        copy.originFrame = originFrame
         copy.startOffset = startOffset
         copy.middleOffset = middleOffset
         copy.endOffset = endOffset
         return copy
+    }
+    
+    public override func isEqual(_ object: Any?) -> Bool {
+        guard let o = object as? PagerCollectionViewLayoutAttributes else { return false }
+        
+        return o.contentView == contentView
+            && o.scrollDirection == scrollDirection
+            && o.startOffset == startOffset
+            && o.middleOffset == middleOffset
+            && o.endOffset == endOffset
     }
 }

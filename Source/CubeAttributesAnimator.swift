@@ -26,15 +26,22 @@ public struct CubeAttributeAnimator: LayoutAttributesAnimator {
         let position = attributes.middleOffset
         if abs(position) >= 1 {
             attributes.contentView?.layer.transform = CATransform3DIdentity
-        } else {
+        } else if attributes.scrollDirection == .horizontal {
             let rotateAngle = totalAngle * position
             var transform = CATransform3DIdentity
             transform.m34 = perspective
             transform = CATransform3DRotate(transform, rotateAngle, 0, 1, 0)
             
-            // attributes.transform = transform
             attributes.contentView?.layer.transform = transform
             attributes.contentView?.keepCenterAndApplyAnchorPoint(CGPoint(x: position > 0 ? 0 : 1, y: 0.5))
+        } else {
+            let rotateAngle = totalAngle * position
+            var transform = CATransform3DIdentity
+            transform.m34 = perspective
+            transform = CATransform3DRotate(transform, rotateAngle, -1, 0, 0)
+            
+            attributes.contentView?.layer.transform = transform
+            attributes.contentView?.keepCenterAndApplyAnchorPoint(CGPoint(x: 0.5, y: position > 0 ? 0 : 1))
         }
     }
 }

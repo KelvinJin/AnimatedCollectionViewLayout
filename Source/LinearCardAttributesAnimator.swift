@@ -30,12 +30,20 @@ public struct LinearCardAttributeAnimator: LayoutAttributesAnimator {
     
     public func animate(collectionView: UICollectionView, attributes: PagerCollectionViewLayoutAttributes) {
         let position = attributes.middleOffset
-        let width = collectionView.frame.width
-        let transitionX = -(width * itemSpacing * position)
         let scaleFactor = scaleRate - 0.1 * abs(position)
-        
         let scaleTransform = CGAffineTransform(scaleX: scaleFactor, y: scaleFactor)
-        let transitionTransform = CGAffineTransform(translationX: transitionX, y: 0)
+        
+        let transitionTransform: CGAffineTransform
+        
+        if attributes.scrollDirection == .horizontal {
+            let width = collectionView.frame.width
+            let transitionX = -(width * itemSpacing * position)
+            transitionTransform = CGAffineTransform(translationX: transitionX, y: 0)
+        } else {
+            let height = collectionView.frame.height
+            let transitionY = -(height * itemSpacing * position)
+            transitionTransform = CGAffineTransform(translationX: 0, y: transitionY)
+        }
         
         attributes.alpha = 1.0 - abs(position) + minAlpha
         attributes.transform = transitionTransform.concatenating(scaleTransform)

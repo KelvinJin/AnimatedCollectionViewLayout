@@ -23,7 +23,13 @@ public struct PageAttributeAnimator: LayoutAttributesAnimator {
         let itemOrigin = attributes.frame.origin
         let scaleFactor = scaleRate * min(position, 0) + 1.0
         var transform = CGAffineTransform(scaleX: scaleFactor, y: scaleFactor)
-        transform = transform.concatenating(CGAffineTransform(translationX: position < 0 ? contentOffset.x - itemOrigin.x : 0, y: 0))
+        
+        if attributes.scrollDirection == .horizontal {
+            transform = transform.concatenating(CGAffineTransform(translationX: position < 0 ? contentOffset.x - itemOrigin.x : 0, y: 0))
+        } else {
+            transform = transform.concatenating(CGAffineTransform(translationX: 0, y: position < 0 ? contentOffset.y - itemOrigin.y : 0))
+        }
+        
         attributes.transform = transform
         attributes.zIndex = attributes.indexPath.row
     }

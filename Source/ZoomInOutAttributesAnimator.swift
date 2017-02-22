@@ -11,7 +11,7 @@ import UIKit
 /// An animator that zoom in/out cells when you scroll.
 public struct ZoomInOutAttributesAnimator: LayoutAttributesAnimator {
     /// The scaleRate decides the maximum scale rate where 0 means no scale and
-    /// 1 means the size will be double at max and disappearing at min.
+    /// 1 means the cell will disappear at min. 0.2 by default.
     public var scaleRate: CGFloat
     
     public init(scaleRate: CGFloat = 0.2) {
@@ -20,11 +20,12 @@ public struct ZoomInOutAttributesAnimator: LayoutAttributesAnimator {
     
     public func animate(collectionView: UICollectionView, attributes: PagerCollectionViewLayoutAttributes) {
         let position = attributes.middleOffset
-        if abs(position) >= 1 {
-            attributes.contentView?.transform = .identity
-        } else {
+        
+        if position <= 0 && position > -1 {
             let scaleFactor = scaleRate * position + 1.0
-            attributes.contentView?.transform = CGAffineTransform(scaleX: scaleFactor, y: scaleFactor)
+            attributes.transform = CGAffineTransform(scaleX: scaleFactor, y: scaleFactor)
+        } else {
+            attributes.transform = .identity
         }
     }
 }

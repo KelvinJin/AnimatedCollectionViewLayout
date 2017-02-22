@@ -27,7 +27,7 @@ public struct ParallaxAttributesAnimator: LayoutAttributesAnimator {
         
         if abs(position) >= 1 {
             // Reset views that are invisible.
-            contentView.transform = .identity
+            contentView.frame = attributes.bounds
         } else if direction == .horizontal {
             let width = collectionView.frame.width
             let transitionX = -(width * speed * position)
