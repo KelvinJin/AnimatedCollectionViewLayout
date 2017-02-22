@@ -19,7 +19,7 @@ public struct ParallaxAttributesAnimator: LayoutAttributesAnimator {
         self.speed = speed
     }
     
-    public func animate(collectionView: UICollectionView, attributes: PagerCollectionViewLayoutAttributes) {
+    public func animate(collectionView: UICollectionView, attributes: AnimatedCollectionViewLayoutAttributes) {
         let position = attributes.middleOffset
         let direction = attributes.scrollDirection
         

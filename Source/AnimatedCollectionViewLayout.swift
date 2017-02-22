@@ -16,11 +16,11 @@ public class AnimatedCollectionViewLayout: UICollectionViewFlowLayout {
     public var animator: LayoutAttributesAnimator?
     
     /// Overrided so that we can store extra information in the layout attributes.
-    public override class var layoutAttributesClass: AnyClass { return PagerCollectionViewLayoutAttributes.self }
+    public override class var layoutAttributesClass: AnyClass { return AnimatedCollectionViewLayoutAttributes.self }
     
     public override func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
         guard let attributes = super.layoutAttributesForElements(in: rect) else { return nil }
-        return attributes.flatMap { $0.copy() as? PagerCollectionViewLayoutAttributes }.map { self.transformLayoutAttributes($0) }
+        return attributes.flatMap { $0.copy() as? AnimatedCollectionViewLayoutAttributes }.map { self.transformLayoutAttributes($0) }
     }
     
     public override func shouldInvalidateLayout(forBoundsChange newBounds: CGRect) -> Bool {
@@ -29,7 +29,7 @@ public class AnimatedCollectionViewLayout: UICollectionViewFlowLayout {
         return true
     }
     
-    private func transformLayoutAttributes(_ attributes: PagerCollectionViewLayoutAttributes) -> UICollectionViewLayoutAttributes {
+    private func transformLayoutAttributes(_ attributes: AnimatedCollectionViewLayoutAttributes) -> UICollectionViewLayoutAttributes {
         
         guard let collectionView = self.collectionView else { return attributes }
         
@@ -73,7 +73,7 @@ public class AnimatedCollectionViewLayout: UICollectionViewFlowLayout {
 }
 
 /// A custom layout attributes that contains extra information.
-public class PagerCollectionViewLayoutAttributes: UICollectionViewLayoutAttributes {
+public class AnimatedCollectionViewLayoutAttributes: UICollectionViewLayoutAttributes {
     public var contentView: UIView?
     public var scrollDirection: UICollectionViewScrollDirection = .vertical
     
@@ -82,7 +82,7 @@ public class PagerCollectionViewLayoutAttributes: UICollectionViewLayoutAttribut
     public var endOffset: CGFloat = 0
     
     public override func copy(with zone: NSZone? = nil) -> Any {
-        let copy = super.copy(with: zone) as! PagerCollectionViewLayoutAttributes
+        let copy = super.copy(with: zone) as! AnimatedCollectionViewLayoutAttributes
         copy.contentView = contentView
         copy.scrollDirection = scrollDirection
         copy.startOffset = startOffset
@@ -92,7 +92,7 @@ public class PagerCollectionViewLayoutAttributes: UICollectionViewLayoutAttribut
     }
     
     public override func isEqual(_ object: Any?) -> Bool {
-        guard let o = object as? PagerCollectionViewLayoutAttributes else { return false }
+        guard let o = object as? AnimatedCollectionViewLayoutAttributes else { return false }
         
         return o.contentView == contentView
             && o.scrollDirection == scrollDirection

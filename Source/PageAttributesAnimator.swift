@@ -17,7 +17,7 @@ public struct PageAttributeAnimator: LayoutAttributesAnimator {
         self.scaleRate = scaleRate
     }
     
-    public func animate(collectionView: UICollectionView, attributes: PagerCollectionViewLayoutAttributes) {
+    public func animate(collectionView: UICollectionView, attributes: AnimatedCollectionViewLayoutAttributes) {
         let position = attributes.middleOffset
         let contentOffset = collectionView.contentOffset
         let itemOrigin = attributes.frame.origin

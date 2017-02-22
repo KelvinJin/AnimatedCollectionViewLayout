@@ -18,7 +18,7 @@ public struct ZoomInOutAttributesAnimator: LayoutAttributesAnimator {
         self.scaleRate = scaleRate
     }
     
-    public func animate(collectionView: UICollectionView, attributes: PagerCollectionViewLayoutAttributes) {
+    public func animate(collectionView: UICollectionView, attributes: AnimatedCollectionViewLayoutAttributes) {
         let position = attributes.middleOffset
         
         if position <= 0 && position > -1 {

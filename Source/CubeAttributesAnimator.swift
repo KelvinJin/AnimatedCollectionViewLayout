@@ -22,7 +22,7 @@ public struct CubeAttributeAnimator: LayoutAttributesAnimator {
         self.totalAngle = totalAngle
     }
     
-    public func animate(collectionView: UICollectionView, attributes: PagerCollectionViewLayoutAttributes) {
+    public func animate(collectionView: UICollectionView, attributes: AnimatedCollectionViewLayoutAttributes) {
         let position = attributes.middleOffset
         if abs(position) >= 1 {
             attributes.contentView?.layer.transform = CATransform3DIdentity
