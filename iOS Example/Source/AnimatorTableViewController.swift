@@ -20,6 +20,8 @@ class AnimatorTableViewController: UITableViewController {
                                                          (TurnAttributeAnimator(), true),
                                                          (PageAttributeAnimator(), true)]
     
+    @IBOutlet weak var isHorizontalScrollToggle: UISwitch!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -27,6 +29,7 @@ class AnimatorTableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let dist = segue.destination as? ImageCollectionViewController, let indexPath = sender as? IndexPath {
             dist.animator = animators[indexPath.row]
+            dist.direction = isHorizontalScrollToggle.isOn ? .horizontal : .vertical
         }
     }
     

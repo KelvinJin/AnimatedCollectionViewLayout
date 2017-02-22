@@ -32,9 +32,6 @@
                                     <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rEp-7G-ele">
-                                            <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
-                                        </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QSQ-Xq-WAm">
                                             <rect key="frame" x="-9" y="39" width="218.5" height="123"/>
                                             <fontDescription key="fontDescription" name="AvenirNext-UltraLight" family="Avenir Next" pointSize="90"/>
@@ -45,15 +42,10 @@
                                 </view>
                                 <constraints>
                                     <constraint firstItem="QSQ-Xq-WAm" firstAttribute="centerX" secondItem="PaF-XJ-Xcy" secondAttribute="centerX" id="9ef-xY-PkK"/>
-                                    <constraint firstItem="rEp-7G-ele" firstAttribute="height" secondItem="PaF-XJ-Xcy" secondAttribute="height" id="A8q-In-0iS"/>
                                     <constraint firstItem="QSQ-Xq-WAm" firstAttribute="centerY" secondItem="PaF-XJ-Xcy" secondAttribute="centerY" id="Ka3-TZ-Uga"/>
-                                    <constraint firstItem="rEp-7G-ele" firstAttribute="width" secondItem="PaF-XJ-Xcy" secondAttribute="width" id="VWm-DV-EL2"/>
-                                    <constraint firstItem="rEp-7G-ele" firstAttribute="centerY" secondItem="PaF-XJ-Xcy" secondAttribute="centerY" id="pAQ-sA-XXz"/>
-                                    <constraint firstItem="rEp-7G-ele" firstAttribute="centerX" secondItem="PaF-XJ-Xcy" secondAttribute="centerX" id="yZz-3A-8OJ"/>
                                 </constraints>
                                 <size key="customSize" width="200" height="200"/>
                                 <connections>
-                                    <outlet property="imageView" destination="rEp-7G-ele" id="c00-fB-pdC"/>
                                     <outlet property="titleLabel" destination="QSQ-Xq-WAm" id="8Vm-ea-2IG"/>
                                 </connections>
                             </collectionViewCell>
@@ -64,6 +56,9 @@
                             <outletCollection property="gestureRecognizers" destination="fV7-M7-lkK" appends="YES" id="xdo-8N-nFh"/>
                         </connections>
                     </collectionView>
+                    <connections>
+                        <outlet property="dismissGesture" destination="fV7-M7-lkK" id="f4D-o0-056"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q7N-eU-rZ2" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <swipeGestureRecognizer direction="down" id="fV7-M7-lkK">
@@ -87,8 +82,16 @@
                             <outlet property="delegate" destination="1N0-Hp-srR" id="mtz-Pt-omi"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="cZr-2G-mbD"/>
+                    <navigationItem key="navigationItem" id="cZr-2G-mbD">
+                        <barButtonItem key="rightBarButtonItem" title="Horizontal Scroll" style="plain" id="fms-Ek-KSO">
+                            <switch key="customView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="zF8-Bv-g8k">
+                                <rect key="frame" x="310" y="6" width="51" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </switch>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
+                        <outlet property="isHorizontalScrollToggle" destination="zF8-Bv-g8k" id="B4Q-KV-sq9"/>
                         <segue destination="24e-mu-gTV" kind="presentation" identifier="ShowCollectionViewController" id="eY7-aQ-bXf"/>
                     </connections>
                 </tableViewController>

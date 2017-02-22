@@ -11,13 +11,16 @@ import AnimatedCollectionViewLayout
 
 class SimpleCollectionViewCell: UICollectionViewCell {
     
-    @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     
-    func bind(color: String, imageName: String) {
-        titleLabel.text = "\(arc4random_uniform(1000))"
+    override func awakeFromNib() {
+        super.awakeFromNib()
         backgroundColor = .clear
+    }
+    
+    func bind(color: String, imageName: String) {
         contentView.backgroundColor = color.hexColor
+        titleLabel.text = "\(arc4random_uniform(1000))"
     }
 }
 
@@ -43,7 +46,10 @@ extension String {
 
 class ImageCollectionViewController: UICollectionViewController {
 
+    @IBOutlet var dismissGesture: UISwipeGestureRecognizer!
+    
     var animator: (LayoutAttributesAnimator, Bool)?
+    var direction: UICollectionViewScrollDirection = .horizontal
     
     let cellIdentifier = "SimpleCollectionViewCell"
     let vcs = [("f44336", "nature1"),
@@ -61,8 +67,11 @@ class ImageCollectionViewController: UICollectionViewController {
         collectionView?.isPagingEnabled = true
         
         if let layout = collectionView?.collectionViewLayout as? AnimatedCollectionViewLayout {
+            layout.scrollDirection = direction
             layout.animator = animator?.0
         }
+        
+        dismissGesture.direction = direction == .horizontal ? .down : .left
     }
 
     override func didReceiveMemoryWarning() {
