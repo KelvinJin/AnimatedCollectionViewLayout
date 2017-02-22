@@ -13,7 +13,8 @@ import UIKit
 public struct CrossFadeAttributeAnimator: LayoutAttributesAnimator {
     public init() {}
     
-    public func animate(collectionView: UICollectionView, attributes: PagerCollectionViewLayoutAttributes, position: CGFloat) {
+    public func animate(collectionView: UICollectionView, attributes: PagerCollectionViewLayoutAttributes) {
+        let position = attributes.middleOffset
         let contentOffset = collectionView.contentOffset
         attributes.frame = CGRect(origin: contentOffset, size: attributes.frame.size)
         attributes.alpha = 1 - abs(position)

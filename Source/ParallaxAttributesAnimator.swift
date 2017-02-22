@@ -19,14 +19,33 @@ public struct ParallaxAttributesAnimator: LayoutAttributesAnimator {
         self.speed = speed
     }
     
-    public func animate(collectionView: UICollectionView, attributes: PagerCollectionViewLayoutAttributes, position: CGFloat) {
+    public func animate(collectionView: UICollectionView, attributes: PagerCollectionViewLayoutAttributes) {
+        let position = attributes.middleOffset
+        let direction = attributes.scrollDirection
+        
+        guard let contentView = attributes.contentView else { return }
+        
         if abs(position) >= 1 {
             // Reset views that are invisible.
-            attributes.contentView?.transform = .identity
-        } else {
+            contentView.transform = .identity
+        } else if direction == .horizontal {
             let width = collectionView.frame.width
             let transitionX = -(width * speed * position)
-            attributes.contentView?.transform = CGAffineTransform(translationX: transitionX, y: 0)
+            let transform = CGAffineTransform(translationX: transitionX, y: 0)
+            let newFrame = attributes.bounds.applying(transform)
+            
+            contentView.frame = newFrame
+        } else {
+            let height = collectionView.frame.height
+            let transitionY = -(height * speed * position)
+            let transform = CGAffineTransform(translationX: 0, y: transitionY)
+            
+            // By default, the content view takes all space in the cell
+            let newFrame = attributes.bounds.applying(transform)
+            
+            // We don't use transform here since there's an issue if layoutSubviews is called 
+            // for every cell due to layout changes in binding method.
+            contentView.frame = newFrame
         }
     }
 }

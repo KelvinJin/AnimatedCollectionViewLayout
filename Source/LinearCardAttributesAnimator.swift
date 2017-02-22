@@ -28,7 +28,8 @@ public struct LinearCardAttributeAnimator: LayoutAttributesAnimator {
         self.scaleRate = scaleRate
     }
     
-    public func animate(collectionView: UICollectionView, attributes: PagerCollectionViewLayoutAttributes, position: CGFloat) {
+    public func animate(collectionView: UICollectionView, attributes: PagerCollectionViewLayoutAttributes) {
+        let position = attributes.middleOffset
         let width = collectionView.frame.width
         let transitionX = -(width * itemSpacing * position)
         let scaleFactor = scaleRate - 0.1 * abs(position)

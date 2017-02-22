@@ -9,5 +9,5 @@
 import UIKit
 
 public protocol LayoutAttributesAnimator {
-    func animate(collectionView: UICollectionView, attributes: PagerCollectionViewLayoutAttributes, position: CGFloat)
+    func animate(collectionView: UICollectionView, attributes: PagerCollectionViewLayoutAttributes)
 }
