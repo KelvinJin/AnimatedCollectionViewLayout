@@ -11,14 +11,15 @@ import AnimatedCollectionViewLayout
 
 class AnimatorTableViewController: UITableViewController {
     
-    private let animators: [(LayoutAttributesAnimator, Bool)] = [(ParallaxAttributesAnimator(), true),
-                                                         (ZoomInOutAttributesAnimator(), true),
-                                                         (RotateInOutAttributesAnimator(), true),
-                                                         (LinearCardAttributesAnimator(), false),
-                                                         (CubeAttributesAnimator(), true),
-                                                         (CrossFadeAttributesAnimator(), true),
-                                                         (SnapInAttributesAnimator(), true),
-                                                         (PageAttributesAnimator(), true)]
+    /// animator, clipToBounds, row, column
+    private let animators: [(LayoutAttributesAnimator, Bool, Int, Int)] = [(ParallaxAttributesAnimator(), true, 1, 1),
+                                                         (ZoomInOutAttributesAnimator(), true, 1, 1),
+                                                         (RotateInOutAttributesAnimator(), true, 1, 1),
+                                                         (LinearCardAttributesAnimator(), false, 1, 1),
+                                                         (CubeAttributesAnimator(), true, 1, 1),
+                                                         (CrossFadeAttributesAnimator(), true, 1, 1),
+                                                         (PageAttributesAnimator(), true, 1, 1),
+                                                         (SnapInAttributesAnimator(), true, 2, 4)]
     
     @IBOutlet weak var isHorizontalScrollToggle: UISwitch!
     

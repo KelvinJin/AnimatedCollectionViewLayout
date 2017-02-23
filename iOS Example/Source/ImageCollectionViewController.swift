@@ -48,7 +48,7 @@ class ImageCollectionViewController: UICollectionViewController {
 
     @IBOutlet var dismissGesture: UISwipeGestureRecognizer!
     
-    var animator: (LayoutAttributesAnimator, Bool)?
+    var animator: (LayoutAttributesAnimator, Bool, Int, Int)?
     var direction: UICollectionViewScrollDirection = .horizontal
     
     let cellIdentifier = "SimpleCollectionViewCell"
@@ -96,14 +96,15 @@ extension ImageCollectionViewController: UICollectionViewDelegateFlowLayout {
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return vcs.count
+        return Int(Int16.max)
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let c = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath)
         
         if let cell = c as? SimpleCollectionViewCell {
-            let v = vcs[indexPath.row]
+            let i = indexPath.row % vcs.count
+            let v = vcs[i]
             cell.bind(color: v.0, imageName: v.1)
             cell.clipsToBounds = animator?.1 ?? true
         }
@@ -112,7 +113,8 @@ extension ImageCollectionViewController: UICollectionViewDelegateFlowLayout {
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return view.bounds.size
+        guard let animator = animator else { return view.bounds.size }
+        return CGSize(width: view.bounds.width / CGFloat(animator.2), height: view.bounds.height / CGFloat(animator.3))
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
