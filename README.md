@@ -67,14 +67,8 @@ collectionView.collectionViewLayout = layout
 
 ### Customization
 
-Animators implement the protocol `LayoutAttributesAnimator`. Most of the built-in ones have additional parameters that you can tweak the transitions.
-You can also write your own animators.
-
-## TODO
-
-- [ ] Support non-paging mode.
-- [ ] Support non-full screen items.  
-- [ ] Support item selection notifications.
+Most of the built-in animators work best in **Paging** mode and they have additional parameters that you can tweak for better transitions.
+You can also write your own animators by implementing the protocol `LayoutAttributesAnimator`.
 
 ## Author
 
