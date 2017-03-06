@@ -83,7 +83,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="cZr-2G-mbD">
-                        <barButtonItem key="rightBarButtonItem" title="Horizontal Scroll" style="plain" id="fms-Ek-KSO">
+                        <barButtonItem key="rightBarButtonItem" title="Horizontal Scroll" id="fms-Ek-KSO">
                             <switch key="customView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="zF8-Bv-g8k">
                                 <rect key="frame" x="310" y="6" width="51" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
