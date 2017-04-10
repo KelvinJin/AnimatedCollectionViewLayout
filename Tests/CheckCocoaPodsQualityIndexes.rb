@@ -24,7 +24,7 @@ puts "Raw data from: http://metrics.cocoapods.org/api/v1/pods/#{pod_name}"
 puts "NOTE: You must pust a new version to CocoaPods to get new metrics!"
 puts ""
 
-uri = URI.parse('https://cocoadocs-api-cocoapods-org.herokuapp.com/pods/FDTake/stats')
+uri = URI.parse('https://cocoadocs-api-cocoapods-org.herokuapp.com/pods/AnimatedCollectionViewLayout/stats')
 http = Net::HTTP.new(uri.host, uri.port)
 http.use_ssl = true if uri.scheme == 'https'
 request = Net::HTTP::Get.new uri
