@@ -18,7 +18,7 @@ public struct RotateInOutAttributesAnimator: LayoutAttributesAnimator {
     /// range [0, 2pi]. PI/4 by default.
     public var maxRotate: CGFloat
     
-    public init(minAlpha: CGFloat = 0, maxRotate: CGFloat = CGFloat(M_PI_4)) {
+    public init(minAlpha: CGFloat = 0, maxRotate: CGFloat = .pi / 4) {
         self.minAlpha = minAlpha
         self.maxRotate = maxRotate
     }

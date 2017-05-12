@@ -17,7 +17,7 @@ public struct CubeAttributesAnimator: LayoutAttributesAnimator {
     /// The higher the angle is, the _steeper_ the cell would be when transforming.
     public var totalAngle: CGFloat
     
-    public init(perspective: CGFloat = -1 / 500, totalAngle: CGFloat = CGFloat(M_PI_2)) {
+    public init(perspective: CGFloat = -1 / 500, totalAngle: CGFloat = .pi / 2) {
         self.perspective = perspective
         self.totalAngle = totalAngle
     }
