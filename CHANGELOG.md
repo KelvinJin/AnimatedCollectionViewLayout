@@ -6,9 +6,16 @@ All notable changes to this project will be documented in this file.
 ### Added
 
 ### Changed
+
+### Removed
+
+## 0.3.0
+
+Released on 2017-05-12
+
+### Changed
   + Changed the deployment targets of both the library and the demo app to 8.0.
   + Fixed a bunch of Xcode warnings.
-### Removed
 
 ## 0.2.0
 
