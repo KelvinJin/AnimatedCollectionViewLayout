@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 extension UIView {
     func keepCenterAndApplyAnchorPoint(_ point: CGPoint) {
