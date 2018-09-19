@@ -45,8 +45,16 @@ To run the example project, clone the repo, and start `iOS Example` in Xcode.
 
 To integrate AnimatedCollectionViewLayout into your Xcode project using CocoaPods, specify it in your `Podfile`:
 
+For Swift 4.2:
+
 ```ruby
 pod 'AnimatedCollectionViewLayout'
+```
+
+For Swift 4.1 or below:
+
+```ruby
+pod 'AnimatedCollectionViewLayout', '~> 0.3.0'
 ```
 
 ## Usage
