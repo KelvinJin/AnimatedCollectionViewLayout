@@ -20,7 +20,7 @@ public class AnimatedCollectionViewLayout: UICollectionViewFlowLayout {
     
     public override func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
         guard let attributes = super.layoutAttributesForElements(in: rect) else { return nil }
-        return attributes.flatMap { $0.copy() as? AnimatedCollectionViewLayoutAttributes }.map { self.transformLayoutAttributes($0) }
+        return attributes.compactMap { $0.copy() as? AnimatedCollectionViewLayoutAttributes }.map { self.transformLayoutAttributes($0) }
     }
     
     public override func shouldInvalidateLayout(forBoundsChange newBounds: CGRect) -> Bool {
@@ -75,7 +75,7 @@ public class AnimatedCollectionViewLayout: UICollectionViewFlowLayout {
 /// A custom layout attributes that contains extra information.
 public class AnimatedCollectionViewLayoutAttributes: UICollectionViewLayoutAttributes {
     public var contentView: UIView?
-    public var scrollDirection: UICollectionViewScrollDirection = .vertical
+    public var scrollDirection: UICollectionView.ScrollDirection = .vertical
     
     /// The ratio of the distance between the start of the cell and the start of the collectionView and the height/width of the cell depending on the scrollDirection. It's 0 when the start of the cell aligns the start of the collectionView. It gets positive when the cell moves towards the scrolling direction (right/down) while getting negative when moves opposite.
     public var startOffset: CGFloat = 0
