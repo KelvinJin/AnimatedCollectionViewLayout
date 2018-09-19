@@ -9,6 +9,13 @@ All notable changes to this project will be documented in this file.
 
 ### Removed
 
+## 0.4.0
+
+Released on 2018-09-19
+
+### Changed
+  + Updated for Xcode 10 with Swift 4.2.
+
 ## 0.3.0
 
 Released on 2017-05-12
