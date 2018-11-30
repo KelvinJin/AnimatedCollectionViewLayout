@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 /// A `UICollectionViewFlowLayout` subclass enables custom transitions between cells.
-public class AnimatedCollectionViewLayout: UICollectionViewFlowLayout {
+open class AnimatedCollectionViewLayout: UICollectionViewFlowLayout {
     
     /// The animator that would actually handle the transitions.
     public var animator: LayoutAttributesAnimator?
