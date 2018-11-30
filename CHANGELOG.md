@@ -9,6 +9,14 @@ All notable changes to this project will be documented in this file.
 
 ### Removed
 
+## 0.5.0
+
+Released on 2018-11-30
+
+### Changed
+  + Updated the sample project for Xcode 10 with Swift 4.2.
+  + Now allowed subclassing AnimatedCollectionViewLayout.
+
 ## 0.4.0
 
 Released on 2018-09-19
