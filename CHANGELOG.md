@@ -9,6 +9,14 @@ All notable changes to this project will be documented in this file.
 
 ### Removed
 
+## 0.6.0
+
+Released on 2019-03-27
+
+### Changed
+  + Updated to support Swift 5.0.
+  + Updated project to support Xcode 10.2.
+
 ## 0.5.0
 
 Released on 2018-11-30
