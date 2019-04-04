@@ -11,11 +11,42 @@ import AnimatedCollectionViewLayout
 
 class SimpleCollectionViewCell: UICollectionViewCell {
     
-    @IBOutlet weak var titleLabel: UILabel!
+    // @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet private var imageView: UIImageView!
+    
+    private let titleLabel = UILabel(frame: .zero)
     
     override func awakeFromNib() {
         super.awakeFromNib()
         backgroundColor = .clear
+        
+        addSubview(titleLabel)
+        
+        let horizontalCenterConstraint = NSLayoutConstraint(item: titleLabel,
+                                                            attribute: .centerX,
+                                                            relatedBy: .equal,
+                                                            toItem: self,
+                                                            attribute: .centerX,
+                                                            multiplier: 1.0,
+                                                            constant: 0)
+        
+        let verticalCenterConstraint = NSLayoutConstraint(item: titleLabel,
+                                                          attribute: .centerY,
+                                                          relatedBy: .equal,
+                                                          toItem: self,
+                                                          attribute: .centerY,
+                                                          multiplier: 1.0,
+                                                          constant: 0)
+        
+        addConstraint(horizontalCenterConstraint)
+        addConstraint(verticalCenterConstraint)
+        
+        titleLabel.translatesAutoresizingMaskIntoConstraints = false
+        titleLabel.font = .preferredFont(forTextStyle: .headline)
+        titleLabel.textColor = .white
+        
+        imageView.contentMode = .scaleAspectFill
+        imageView.image = #imageLiteral(resourceName: "nature3")
     }
     
     func bind(color: String, imageName: String) {

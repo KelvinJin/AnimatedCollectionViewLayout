@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="NbP-BS-4jY">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="NbP-BS-4jY">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -32,21 +32,20 @@
                                     <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QSQ-Xq-WAm">
-                                            <rect key="frame" x="-9" y="38.5" width="218" height="123"/>
-                                            <fontDescription key="fontDescription" name="AvenirNext-UltraLight" family="Avenir Next" pointSize="90"/>
-                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8gI-El-CPc">
+                                            <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                        </imageView>
                                     </subviews>
                                 </view>
                                 <constraints>
-                                    <constraint firstItem="QSQ-Xq-WAm" firstAttribute="centerX" secondItem="PaF-XJ-Xcy" secondAttribute="centerX" id="9ef-xY-PkK"/>
-                                    <constraint firstItem="QSQ-Xq-WAm" firstAttribute="centerY" secondItem="PaF-XJ-Xcy" secondAttribute="centerY" id="Ka3-TZ-Uga"/>
+                                    <constraint firstAttribute="bottom" secondItem="8gI-El-CPc" secondAttribute="bottom" id="NcH-gu-whz"/>
+                                    <constraint firstAttribute="trailing" secondItem="8gI-El-CPc" secondAttribute="trailing" id="VRy-0w-Fbr"/>
+                                    <constraint firstItem="8gI-El-CPc" firstAttribute="leading" secondItem="PaF-XJ-Xcy" secondAttribute="leading" id="ZKn-R6-Jer"/>
+                                    <constraint firstItem="8gI-El-CPc" firstAttribute="top" secondItem="PaF-XJ-Xcy" secondAttribute="top" id="osF-Kr-Lhp"/>
                                 </constraints>
                                 <size key="customSize" width="200" height="200"/>
                                 <connections>
-                                    <outlet property="titleLabel" destination="QSQ-Xq-WAm" id="8Vm-ea-2IG"/>
+                                    <outlet property="imageView" destination="8gI-El-CPc" id="OY3-mP-zo6"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
