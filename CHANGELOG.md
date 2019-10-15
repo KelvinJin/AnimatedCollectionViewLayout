@@ -9,6 +9,14 @@ All notable changes to this project will be documented in this file.
 
 ### Removed
 
+## 1.0.0
+
+Released on 2019-10-16
+
+### Changed
+  + Supported Swift Package Manager.
+
+
 ## 0.6.0
 
 Released on 2019-03-27
