@@ -6,7 +6,7 @@ env:
   - LANG=en_US.UTF-8
   - WORKSPACE="AnimatedCollectionViewLayout.xcworkspace"
   - IOS_FRAMEWORK_SCHEME="AnimatedCollectionViewLayout"
-  - IOS_SDK=iphonesimulator13
+  - IOS_SDK=iphonesimulator13.1
   - EXAMPLE_SCHEME="iOS Example"
   matrix:
     - DESTINATION="OS=13,name=iPhone 11"     SCHEME="$IOS_FRAMEWORK_SCHEME"     SDK="$IOS_SDK"     POD_LINT="NO"
