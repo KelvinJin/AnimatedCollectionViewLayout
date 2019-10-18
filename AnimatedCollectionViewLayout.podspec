@@ -24,5 +24,6 @@ Pod::Spec.new do |s|
   s.authors = { 'Jin Wang' => 'jinw1990@gmail.com' }
   s.source = { :git => 'https://github.com/KelvinJin/AnimatedCollectionViewLayout.git', :tag => s.version }
   s.ios.deployment_target = '8.0'
-  s.source_files = 'Source/**/*.swift'
+  s.source_files = 'Sources/**/*.swift'
+  s.swift_versions = ['5.0', '5.1']
 end
