@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = 'AnimatedCollectionViewLayout'
-  s.version = '1.0.0'
+  s.version = '1.0.1'
   s.license = { :type => 'MIT', :file => 'LICENSE' }
   s.summary = 'A UICollectionViewLayout subclass that adds custom
   transitions/animations to the UICollectionView'
