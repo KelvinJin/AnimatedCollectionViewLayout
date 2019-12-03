@@ -26,6 +26,7 @@ public struct CubeAttributesAnimator: LayoutAttributesAnimator {
         let position = attributes.middleOffset
         if abs(position) >= 1 {
             attributes.contentView?.layer.transform = CATransform3DIdentity
+            attributes.contentView?.keepCenterAndApplyAnchorPoint(CGPoint(x: 0.5, y: 0.5))
         } else if attributes.scrollDirection == .horizontal {
             let rotateAngle = totalAngle * position
             var transform = CATransform3DIdentity
