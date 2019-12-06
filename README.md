@@ -57,6 +57,10 @@ For Swift 4.1 or below:
 pod 'AnimatedCollectionViewLayout', '~> 0.3.0'
 ```
 
+### Carthage & SPM
+
+Carthage and Swift Package Manager are also supported.
+
 ## Usage
 
 ### Get Started
