@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = 'AnimatedCollectionViewLayout'
-  s.version = '1.0.1'
+  s.version = '1.1.0'
   s.license = { :type => 'MIT', :file => 'LICENSE' }
   s.summary = 'A UICollectionViewLayout subclass that adds custom
   transitions/animations to the UICollectionView'
@@ -23,7 +23,7 @@ Pod::Spec.new do |s|
   s.homepage = 'https://github.com/KelvinJin/AnimatedCollectionViewLayout'
   s.authors = { 'Jin Wang' => 'jinw1990@gmail.com' }
   s.source = { :git => 'https://github.com/KelvinJin/AnimatedCollectionViewLayout.git', :tag => s.version }
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '9.0'
   s.source_files = 'Sources/**/*.swift'
   s.swift_versions = ['5.0', '5.1']
 end

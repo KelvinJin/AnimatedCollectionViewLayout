@@ -9,6 +9,17 @@ All notable changes to this project will be documented in this file.
 
 ### Removed
 
+## 1.1.0
+
+Released on 2020-09-20
+
+### Changed
+  + Fixed an issue where on iOS 14, changing contentView's frame property won't effect. This applies to ParallaxAttributesAnimator and CubeAttributesAnimator.
+  + Updated the projects to use Xcode 12.
+
+### Removed 
+  + Dropped iOS 8 support.
+
 ## 1.0.1
 ### Changed
   + Fixed an issue where UIKit will reset position but not anchor point of a content view.

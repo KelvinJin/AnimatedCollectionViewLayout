@@ -31,6 +31,3 @@ script:
   - if [ $POD_LINT == "YES" ]; then
       pod lib lint;
     fi
-
-# Test CocoaPods quality scores are met
-  - ruby Tests/CheckCocoaPodsQualityIndexes.rb AnimatedCollectionViewLayout
