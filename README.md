@@ -37,7 +37,7 @@ To run the example project, clone the repo, and start `iOS Example` in Xcode.
 
 ## Requirements
 
-- iOS 8.0+
+- iOS 9.0+
 
 ## Installation
 
