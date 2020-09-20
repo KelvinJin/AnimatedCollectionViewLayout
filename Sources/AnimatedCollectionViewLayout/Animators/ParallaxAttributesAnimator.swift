@@ -34,7 +34,12 @@ public struct ParallaxAttributesAnimator: LayoutAttributesAnimator {
             let transform = CGAffineTransform(translationX: transitionX, y: 0)
             let newFrame = attributes.bounds.applying(transform)
             
-            contentView.frame = newFrame
+            if #available(iOS 14, *) {
+                contentView.transform = transform
+            } else {
+                contentView.frame = newFrame
+            }
+            
         } else {
             let height = collectionView.frame.height
             let transitionY = -(height * speed * position)
@@ -45,7 +50,15 @@ public struct ParallaxAttributesAnimator: LayoutAttributesAnimator {
             
             // We don't use transform here since there's an issue if layoutSubviews is called 
             // for every cell due to layout changes in binding method.
-            contentView.frame = newFrame
+            //
+            // Update for iOS 14: It seems that setting frame of content view
+            // won't work for iOS 14. And transform on the other hand doesn't work pre iOS 14
+            // so we adapt the changes here.
+            if #available(iOS 14, *) {
+                contentView.transform = transform
+            } else {
+                contentView.frame = newFrame
+            }
         }
     }
 }
